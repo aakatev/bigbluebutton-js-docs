@@ -1,4 +1,4 @@
-baseURL = "aakatev.github.io/bigbluebutton-js-docs/"
+baseURL = "https://aakatev.github.io/bigbluebutton-js-docs/"
 title = "BigBlueButton JavaScript"
 enableRobotsTXT = true
 themesDir = "../.."

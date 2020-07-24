@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome on BigBlueButton JavaScript</title>
-    <link>aakatev.github.io/bigbluebutton-js-docs/docs/</link>
+    <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/</link>
     <description>Recent content in Welcome on BigBlueButton JavaScript</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="aakatev.github.io/bigbluebutton-js-docs/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aakatev.github.io/bigbluebutton-js-docs/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
