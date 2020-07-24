@@ -40,7 +40,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   time_format_default = "January 2, 2006"
   [params.logo]
     lightMode = "logo.png"
-    darkMode = "logo.png"
+    darkMode = "logo_dark.png"
 
   [params.source]
     name = "GitHub"

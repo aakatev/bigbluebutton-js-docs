@@ -1,9 +1,9 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/Users/aakatev/Documents/personal/compose/site",
+	"sourceRoot": "/Users/aakatev/Documents/personal/bbb/compose/site",
 	"sources": [
-		"/Users/aakatev/Documents/personal/compose/assets/sass/main.sass",
+		"/Users/aakatev/Documents/personal/bbb/compose/assets/sass/main.sass",
 		"../assets/sass/_variables.sass",
 		"../assets/sass/_base.sass",
 		"../assets/sass/_nav.sass",
