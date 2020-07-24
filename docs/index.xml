@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bigbluebutton-js on BigBlueButton JavaScript</title>
+    <link>aakatev.github.io/bigbluebutton-js-docs/</link>
+    <description>Recent content in bigbluebutton-js on BigBlueButton JavaScript</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="aakatev.github.io/bigbluebutton-js-docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Examples</title>
+      <link>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/</guid>
+      <description>API Calls The library provides several modules. Use api module to construct URLs. To handle API calls, a developer should utilize http module.
+This division into separate modules allows developers to use bigbluebutton-js with custom http clients (the library default one is axios), and xml parsers.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  const bbb = require(&amp;#39;bigbluebutton-js&amp;#39;) // BBB_URL and BBB_SECRET can be obtained // by running bbb-conf --secret on your BBB server // refer to Getting Started for more information let api = bbb.</description>
+    </item>
+    
+    <item>
+      <title>API Reference</title>
+      <link>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/</guid>
+      <description>When using bigbluebutton-js the required parameters should be passed as function arguments, while non-required can be passed as options object.
+For comprehensive API reference, see docs.bigbluebutton.org.
+Administration create - create a new meeting Parameters
+   Parameter Description Required/Otional     name Meeting name required   meetingId Meeting ID required   attendeePW Attendee password optional   moderatorPW Moderator password optional   welcome Chat welcome message optional   dialNumber Cell phone access number optional   voiceBridge FreeSWITCH voice conference number optional   maxParticipants Maximum maximum number of participants optional   logoutURL Redirect URL after logout optional   record Enable/disable meeting record optional   duration Meeting maximum duration optional   isBreakout true for a breakout rooms required (breakout room)   parentMeetingID Top-level meeting id of the breakout room required (breakout Room)   sequence Breakout room sequence number required (breakout Room)   freeJoin true allows user to have a choice of a breakout room to join optional (breakout Room)   meta Meeting metadata optional   moderatorOnlyMessage Moderator only chat message optional   autoStartRecording true will instruct to start recording on first user join optional   allowStartStopRecording Allow users to start/stop recordings optional   webcamsOnlyForModerator Users webcams are only seeing by moderators optional   logo Default logo in Flash client optional   bannerText Banner text optional   bannerColor Banner background color optional   copyright Copyright text optional   muteOnStart Mute all users on meeting start optional   allowModsToUnmuteUsers Allow moderators to unmute users optional   lockSettingsDisableCam true will prevent users from sharing webcams optional   lockSettingsDisableMic true will prevent users from sharing microphones optional   lockSettingsDisablePrivateChat true will disable private chats optional   lockSettingsDisablePublicChat true will disable public chat optional   lockSettingsDisableNote true will disable notes optional   lockSettingsLockedLayout true will lock meeting layout optional   lockSettingsLockOnJoin false will disable applying settings optional   lockSettingsLockOnJoinConfigurable true will allow applying lockSettingsLockOnJoin optional   guestPolicy Possible values: ALWAYS_ACCEPT, ALWAYS_DENY, ASK_MODERATOR optional    join - join an existing meeting Parameters</description>
+    </item>
+    
+    <item>
+      <title>WebHooks Reference</title>
+      <link>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/</guid>
+      <description>For comprehensive WebHooks reference, see docs.bigbluebutton.org.
+create - create a new hook Parameters
+   Parameter Description Required/Otional     callbackURL Callback URL to receive events required   meetingID Meeting ID optional   getRaw true set events to be unprocessed optional    destroy - remove an existing hook Parameters
+   Parameter Description Required/Otional     hookID Hooks ID required    list - list existing hooks Parameters</description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/</guid>
+      <description>Checkout Source The most recent version is available on GitHub:
+1  git clone https://github.com/aakatev/bigbluebutton-js   Running Tests To run the test suites some prior configuration is required. We use dotenv to manage environmental configuration.
+First, create a .env file in library root. The file should have the following content:
+BBB_URL=https://mysite.com/bigbluebutton BBB_SECRET=MySuperSecretSharedToken For comprehensive configuration documentation, see our Getting Started section.
+Make sure, you have installed development dependencies. Now you can run tests:</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/</guid>
+      <description>License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise.</description>
+    </item>
+    
+  </channel>
+</rss>

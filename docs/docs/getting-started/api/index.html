@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.73.0" />
+<link rel="apple-touch-icon" sizes="180x180" href='/favicons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicons/favicon-16x16.png'>
+<link rel="manifest" href='/favicons/site.webmanifest'>
+<link rel="mask-icon" href='/favicons/safari-pinned-tab.svg'  color="#004750">
+<link rel="shortcut icon" href='/favicons/favicon.ico'>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content='/favicons/browserconfig.xml'>
+<meta name="theme-color" content="#ffffff">
+
+<title>API Reference | BigBlueButton JavaScript</title><meta property="og:title" content="API Reference" />
+<meta property="og:description" content="API reference for the BigBlueButton server.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/" />
+
+<meta itemprop="name" content="API Reference">
+<meta itemprop="description" content="API reference for the BigBlueButton server.
+">
+
+<meta itemprop="wordCount" content="580">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="API Reference"/>
+<meta name="twitter:description" content="API reference for the BigBlueButton server.
+"/>
+
+
+<link rel = 'stylesheet' href = '/aakatev.github.io/bigbluebutton-js-docs/css/styles.af6f1aaeb8970239ef8c47174dbbb1b11902effcd1e2170749d4356fe9ab95a3d7dc4c0761ee54481d2315fcf04e6cdde81db63ad2e9921a3dd3d48f9e1ff871.css' integrity = 'sha512-r28arriXAjnvjEcXTbuxsRkC7/zR4hcHSdQ1b&#43;mrlaPX3EwHYe5USB0jFfzwTmzd6B22OtLpkho909SPnh/4cQ=='>
+
+</head>
+<body class="page-page">
+  <header class="nav_header"><nav class="wrap nav">
+	<a href="aakatev.github.io/bigbluebutton-js-docs/">
+		<picture>
+			
+			<source srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' media="(prefers-color-scheme: dark)">
+			<img srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' alt = 'BigBlueButton JavaScript Logo'>
+		</picture>
+	</a>
+	<div class="search">
+  <label for="search" class="search_label"></label>
+  <input type="search" class="search_field" placeholder="Search the docs ..." id="search">
+  <div class="search_results"></div>
+</div>
+
+
+	
+	<ul class="nav_body">
+		<li class="nav-item">
+			<a class="nav-link" href="aakatev.github.io/bigbluebutton-js-docs/docs/"><span>Docs</span></a>
+		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link" href="https://github.com/aakatev/bigbluebutton-js" target="_blank">GitHub</a>
+		</li>
+	</ul>
+</nav>
+
+  </header>
+  <main class="main wrap pt-4"><div class="grid-auto">
+  <div><aside class="aside">
+  <section class="section">
+    <h2 class="section_title"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/" class="group">Welcome</a></h2>
+      <section class="" id="docs-welcome">
+  <section class="section">
+    <h2 class="section_title"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/" class="group">Getting Started</a></h2>
+      <section class="" id="docs-getting-started">
+        <h3 class="section_link"><a id="docs-examples" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/">Examples</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#api-calls">API Calls</a></li>
+    <li><a href="#webhooks">WebHooks</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link active"><a id="docs-api-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/">API Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#administration">Administration</a>
+      <ul>
+        <li><a href="#create---create-a-new-meeting">create - create a new meeting</a></li>
+        <li><a href="#join---join-an-existing-meeting">join - join an existing meeting</a></li>
+        <li><a href="#end---forcefully-end-an-existing-meeting">end - forcefully end an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring">Monitoring</a>
+      <ul>
+        <li><a href="#ismeetingrunning---check-whether-a-meeting-is-running">isMeetingRunning - check whether a meeting is running</a></li>
+        <li><a href="#getmeetings---get-the-list-of-existing-meetings">getMeetings - get the list of existing meetings</a></li>
+        <li><a href="#getmeetinginfo---get-details-of-an-existing-meeting">getMeetingInfo - get details of an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#recording">Recording</a>
+      <ul>
+        <li><a href="#getrecordings---get-list-of-recordinngs">getRecordings - get list of recordinngs</a></li>
+        <li><a href="#publishrecordings---set-publishingunpublishing-of-a-recording">publishRecordings - set publishing/unpublishing of a recording</a></li>
+        <li><a href="#deleterecordings---delete-an-existing-recording">deleteRecordings - delete an existing recording</a></li>
+        <li><a href="#updaterecordings---update-recording-metadata">updateRecordings - update recording metadata</a></li>
+      </ul>
+    </li>
+    <li><a href="#webhooks">WebHooks</a>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-webhooks-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/">WebHooks Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-development" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/">Development</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#checkout-source">Checkout Source</a></li>
+    <li><a href="#running-tests">Running Tests</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-about" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/">About</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav>
+      </section>
+  </section>
+      </section>
+  </section>
+</aside>
+
+  </div>
+  <section class="content">
+    <h1>API Reference</h1><p>When using <code>bigbluebutton-js</code> the required parameters should be passed as function arguments, while non-required can be passed as options object.</p>
+<p>For comprehensive API reference, see <a href="https://docs.bigbluebutton.org/dev/api.html#api-calls"><code>docs.bigbluebutton.org</code></a>.</p>
+<h2 id="administration">Administration</h2>
+<h3 id="create---create-a-new-meeting">create - create a new meeting</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Meeting name</td>
+<td>required</td>
+</tr>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>required</td>
+</tr>
+<tr>
+<td>attendeePW</td>
+<td>Attendee password</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>moderatorPW</td>
+<td>Moderator password</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>welcome</td>
+<td>Chat welcome message</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>dialNumber</td>
+<td>Cell phone access number</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>voiceBridge</td>
+<td>FreeSWITCH voice conference number</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>maxParticipants</td>
+<td>Maximum maximum number of participants</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>logoutURL</td>
+<td>Redirect URL after logout</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>record</td>
+<td>Enable/disable meeting record</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Meeting maximum duration</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>isBreakout</td>
+<td><code>true</code> for a breakout rooms</td>
+<td>required (breakout room)</td>
+</tr>
+<tr>
+<td>parentMeetingID</td>
+<td>Top-level meeting id of the breakout room</td>
+<td>required (breakout Room)</td>
+</tr>
+<tr>
+<td>sequence</td>
+<td>Breakout room sequence number</td>
+<td>required (breakout Room)</td>
+</tr>
+<tr>
+<td>freeJoin</td>
+<td><code>true</code> allows user to have a choice of a breakout room to join</td>
+<td>optional (breakout Room)</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>Meeting metadata</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>moderatorOnlyMessage</td>
+<td>Moderator only chat message</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>autoStartRecording</td>
+<td><code>true</code> will instruct to start recording on first user join</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>allowStartStopRecording</td>
+<td>Allow users to start/stop recordings</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>webcamsOnlyForModerator</td>
+<td>Users webcams are only seeing by moderators</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>logo</td>
+<td>Default logo in Flash client</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>bannerText</td>
+<td>Banner text</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>bannerColor</td>
+<td>Banner background color</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>Copyright text</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>muteOnStart</td>
+<td>Mute all users on meeting start</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>allowModsToUnmuteUsers</td>
+<td>Allow moderators to unmute users</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsDisableCam</td>
+<td><code>true</code> will prevent users from sharing webcams</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsDisableMic</td>
+<td><code>true</code> will prevent users from sharing microphones</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsDisablePrivateChat</td>
+<td><code>true</code> will disable private chats</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsDisablePublicChat</td>
+<td><code>true</code> will disable public chat</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsDisableNote</td>
+<td><code>true</code> will disable notes</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsLockedLayout</td>
+<td><code>true</code> will lock meeting layout</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsLockOnJoin</td>
+<td><code>false</code> will disable applying settings</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>lockSettingsLockOnJoinConfigurable</td>
+<td><code>true</code> will allow applying <code>lockSettingsLockOnJoin</code></td>
+<td>optional</td>
+</tr>
+<tr>
+<td>guestPolicy</td>
+<td>Possible values: <code>ALWAYS_ACCEPT</code>, <code>ALWAYS_DENY</code>, <code>ASK_MODERATOR</code></td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="join---join-an-existing-meeting">join - join an existing meeting</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fullName</td>
+<td>Users full name</td>
+<td>required</td>
+</tr>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Attendee/moderator password</td>
+<td>required</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>If provided, parameter should match meeting <code>createTime</code></td>
+<td>optional</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>User ID</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>webVoiceConf</td>
+<td>Custom voip voice extension</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>configToken</td>
+<td>Apply custom configuration associated with the token</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>defaultLayout</td>
+<td>Layout to load on user join</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>avatarURL</td>
+<td>Link to user avatar (<a href="https://github.com/bigbluebutton/bigbluebutton/issues/8566">#8566</a>)</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td>Custom redirect behaviour of join API (<a href="https://docs.bigbluebutton.org/dev/api.html#join">learn more</a>)</td>
+<td>optional (experimental)</td>
+</tr>
+<tr>
+<td>clientURL</td>
+<td>Display custom url (<a href="https://docs.bigbluebutton.org/dev/api.html#join">learn more</a>)</td>
+<td>optional (experimental)</td>
+</tr>
+<tr>
+<td>joinViaHtml5</td>
+<td><code>true</code> to force HTML5</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>guest</td>
+<td><code>true</code> for guest users</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="end---forcefully-end-an-existing-meeting">end - forcefully end an existing meeting</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Moderator password</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h2 id="monitoring">Monitoring</h2>
+<h3 id="ismeetingrunning---check-whether-a-meeting-is-running">isMeetingRunning - check whether a meeting is running</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmeetings---get-the-list-of-existing-meetings">getMeetings - get the list of existing meetings</h3>
+<h3 id="getmeetinginfo---get-details-of-an-existing-meeting">getMeetingInfo - get details of an existing meeting</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recording">Recording</h2>
+<h3 id="getrecordings---get-list-of-recordinngs">getRecordings - get list of recordinngs</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meetingId</td>
+<td>Meeting ID</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>recordID</td>
+<td>Recordings record ID</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Recordings state (possible values: <code>processing</code>, <code>processed</code>, <code>published</code>,<code>unpublished</code>,<code>deleted</code>, <code>any</code>)</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>Recordings metadata</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="publishrecordings---set-publishingunpublishing-of-a-recording">publishRecordings - set publishing/unpublishing of a recording</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recordID</td>
+<td>Recordings record ID</td>
+<td>required</td>
+</tr>
+<tr>
+<td>publish</td>
+<td><code>true</code> or <code>false</code> value</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deleterecordings---delete-an-existing-recording">deleteRecordings - delete an existing recording</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recordID</td>
+<td>Recordings record ID</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="updaterecordings---update-recording-metadata">updateRecordings - update recording metadata</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recordID</td>
+<td>Recordings record ID</td>
+<td>required</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>Recordings metadata</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="webhooks">WebHooks</h2>
+<h3 id="create---create-a-new-hook">create - create a new hook</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callbackURL</td>
+<td>Callback URL to receive events</td>
+<td>required</td>
+</tr>
+<tr>
+<td>meetingID</td>
+<td>Meeting ID</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>getRaw</td>
+<td><code>true</code> set events to be unprocessed</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="destroy---remove-an-existing-hook">destroy - remove an existing hook</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hookID</td>
+<td>Hooks ID</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list---list-existing-hooks">list - list existing hooks</h3>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required/Otional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meetingID</td>
+<td>Meeting ID</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+
+    <div class="pager">
+      <a href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/" id="prev">&lt;&lt; Examples</a>
+      
+      <a href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/" id="next">WebHooks Reference >></a>
+    </div>
+  </section>
+</div>
+
+  </main>
+<footer class="mt-2 pt-2 pb-2">
+  <div class="wrap">
+    <p>&copy; 2020 bigbluebutton-js</p>
+  </div>
+</footer>
+
+
+
+<script src = '/aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.c9f854aaa309a3d70e7c041e4e8cebd7618c63af9aa7fdcfac49343d4e9c6421c16e77634bc252da16ff6defff966f84dcfa4be5fd4419433fb37390e06f77a7.js'></script>
+
+</body>
+</html>

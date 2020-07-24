@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.73.0" />
+<link rel="apple-touch-icon" sizes="180x180" href='/favicons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicons/favicon-16x16.png'>
+<link rel="manifest" href='/favicons/site.webmanifest'>
+<link rel="mask-icon" href='/favicons/safari-pinned-tab.svg'  color="#004750">
+<link rel="shortcut icon" href='/favicons/favicon.ico'>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content='/favicons/browserconfig.xml'>
+<meta name="theme-color" content="#ffffff">
+
+<title>About | BigBlueButton JavaScript</title><meta property="og:title" content="About" />
+<meta property="og:description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/" />
+
+<meta itemprop="name" content="About">
+<meta itemprop="description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise.">
+
+<meta itemprop="wordCount" content="25">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="About"/>
+<meta name="twitter:description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise."/>
+
+
+<link rel = 'stylesheet' href = '/aakatev.github.io/bigbluebutton-js-docs/css/styles.af6f1aaeb8970239ef8c47174dbbb1b11902effcd1e2170749d4356fe9ab95a3d7dc4c0761ee54481d2315fcf04e6cdde81db63ad2e9921a3dd3d48f9e1ff871.css' integrity = 'sha512-r28arriXAjnvjEcXTbuxsRkC7/zR4hcHSdQ1b&#43;mrlaPX3EwHYe5USB0jFfzwTmzd6B22OtLpkho909SPnh/4cQ=='>
+
+</head>
+<body class="page-page">
+  <header class="nav_header"><nav class="wrap nav">
+	<a href="aakatev.github.io/bigbluebutton-js-docs/">
+		<picture>
+			
+			<source srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' media="(prefers-color-scheme: dark)">
+			<img srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' alt = 'BigBlueButton JavaScript Logo'>
+		</picture>
+	</a>
+	<div class="search">
+  <label for="search" class="search_label"></label>
+  <input type="search" class="search_field" placeholder="Search the docs ..." id="search">
+  <div class="search_results"></div>
+</div>
+
+
+	
+	<ul class="nav_body">
+		<li class="nav-item">
+			<a class="nav-link" href="aakatev.github.io/bigbluebutton-js-docs/docs/"><span>Docs</span></a>
+		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link" href="https://github.com/aakatev/bigbluebutton-js" target="_blank">GitHub</a>
+		</li>
+	</ul>
+</nav>
+
+  </header>
+  <main class="main wrap pt-4"><div class="grid-auto">
+  <div><aside class="aside">
+  <section class="section">
+    <h2 class="section_title"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/" class="group">Welcome</a></h2>
+      <section class="" id="docs-welcome">
+  <section class="section">
+    <h2 class="section_title"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/" class="group">Getting Started</a></h2>
+      <section class="" id="docs-getting-started">
+        <h3 class="section_link"><a id="docs-examples" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/">Examples</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#api-calls">API Calls</a></li>
+    <li><a href="#webhooks">WebHooks</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-api-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/">API Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#administration">Administration</a>
+      <ul>
+        <li><a href="#create---create-a-new-meeting">create - create a new meeting</a></li>
+        <li><a href="#join---join-an-existing-meeting">join - join an existing meeting</a></li>
+        <li><a href="#end---forcefully-end-an-existing-meeting">end - forcefully end an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring">Monitoring</a>
+      <ul>
+        <li><a href="#ismeetingrunning---check-whether-a-meeting-is-running">isMeetingRunning - check whether a meeting is running</a></li>
+        <li><a href="#getmeetings---get-the-list-of-existing-meetings">getMeetings - get the list of existing meetings</a></li>
+        <li><a href="#getmeetinginfo---get-details-of-an-existing-meeting">getMeetingInfo - get details of an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#recording">Recording</a>
+      <ul>
+        <li><a href="#getrecordings---get-list-of-recordinngs">getRecordings - get list of recordinngs</a></li>
+        <li><a href="#publishrecordings---set-publishingunpublishing-of-a-recording">publishRecordings - set publishing/unpublishing of a recording</a></li>
+        <li><a href="#deleterecordings---delete-an-existing-recording">deleteRecordings - delete an existing recording</a></li>
+        <li><a href="#updaterecordings---update-recording-metadata">updateRecordings - update recording metadata</a></li>
+      </ul>
+    </li>
+    <li><a href="#webhooks">WebHooks</a>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-webhooks-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/">WebHooks Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-development" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/">Development</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#checkout-source">Checkout Source</a></li>
+    <li><a href="#running-tests">Running Tests</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link active"><a id="docs-about" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/">About</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav>
+      </section>
+  </section>
+      </section>
+  </section>
+</aside>
+
+  </div>
+  <section class="content">
+    <h1>About</h1><h2 id="license">License</h2>
+<p>This project is licensed under the ISC License - see the <a href="https://github.com/aakatev/bigbluebutton-js/blob/master/LICENSE"><code>LICENSE</code></a> file for details.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>The project started as a fork of <a href="https://www.npmjs.com/package/bbb-promise"><code>bbb-promise</code></a>.</p>
+
+    <div class="pager">
+      <a href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/" id="prev">&lt;&lt; Development</a>
+      
+    </div>
+  </section>
+</div>
+
+  </main>
+<footer class="mt-2 pt-2 pb-2">
+  <div class="wrap">
+    <p>&copy; 2020 bigbluebutton-js</p>
+  </div>
+</footer>
+
+
+
+<script src = '/aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.c9f854aaa309a3d70e7c041e4e8cebd7618c63af9aa7fdcfac49343d4e9c6421c16e77634bc252da16ff6defff966f84dcfa4be5fd4419433fb37390e06f77a7.js'></script>
+
+</body>
+</html>

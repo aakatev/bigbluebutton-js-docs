@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.73.0" />
+<link rel="apple-touch-icon" sizes="180x180" href='/favicons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicons/favicon-16x16.png'>
+<link rel="manifest" href='/favicons/site.webmanifest'>
+<link rel="mask-icon" href='/favicons/safari-pinned-tab.svg'  color="#004750">
+<link rel="shortcut icon" href='/favicons/favicon.ico'>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content='/favicons/browserconfig.xml'>
+<meta name="theme-color" content="#ffffff">
+
+<title>Getting Started | BigBlueButton JavaScript</title><meta property="og:title" content="Getting Started" />
+<meta property="og:description" content="This page tells you how to get started with the bigbluebutton-js, including installation and basic configuration.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/" />
+
+<meta itemprop="name" content="Getting Started">
+<meta itemprop="description" content="This page tells you how to get started with the bigbluebutton-js, including installation and basic configuration.
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Getting Started"/>
+<meta name="twitter:description" content="This page tells you how to get started with the bigbluebutton-js, including installation and basic configuration.
+"/>
+
+
+<link rel = 'stylesheet' href = '/aakatev.github.io/bigbluebutton-js-docs/css/styles.af6f1aaeb8970239ef8c47174dbbb1b11902effcd1e2170749d4356fe9ab95a3d7dc4c0761ee54481d2315fcf04e6cdde81db63ad2e9921a3dd3d48f9e1ff871.css' integrity = 'sha512-r28arriXAjnvjEcXTbuxsRkC7/zR4hcHSdQ1b&#43;mrlaPX3EwHYe5USB0jFfzwTmzd6B22OtLpkho909SPnh/4cQ=='>
+
+</head>
+<body class="page-section">
+  <header class="nav_header"><nav class="wrap nav">
+	<a href="aakatev.github.io/bigbluebutton-js-docs/">
+		<picture>
+			
+			<source srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' media="(prefers-color-scheme: dark)">
+			<img srcset = 'aakatev.github.io/bigbluebutton-js-docs/images/logo.png' alt = 'BigBlueButton JavaScript Logo'>
+		</picture>
+	</a>
+	<div class="search">
+  <label for="search" class="search_label"></label>
+  <input type="search" class="search_field" placeholder="Search the docs ..." id="search">
+  <div class="search_results"></div>
+</div>
+
+
+	
+	<ul class="nav_body">
+		<li class="nav-item">
+			<a class="nav-link" href="aakatev.github.io/bigbluebutton-js-docs/docs/"><span>Docs</span></a>
+		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link" href="https://github.com/aakatev/bigbluebutton-js" target="_blank">GitHub</a>
+		</li>
+	</ul>
+</nav>
+
+  </header>
+  <main class="main wrap pt-4"><div class="grid-auto">
+  <div><aside class="aside">
+  <section class="section">
+    <h2 class="section_title"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/" class="group">Welcome</a></h2>
+      <section class="" id="docs-welcome">
+  <section class="section">
+    <h2 class="section_title active"><a  href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/" class="group">Getting Started</a></h2>
+      <section class="" id="docs-getting-started">
+        <h3 class="section_link"><a id="docs-examples" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/">Examples</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#api-calls">API Calls</a></li>
+    <li><a href="#webhooks">WebHooks</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-api-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/">API Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#administration">Administration</a>
+      <ul>
+        <li><a href="#create---create-a-new-meeting">create - create a new meeting</a></li>
+        <li><a href="#join---join-an-existing-meeting">join - join an existing meeting</a></li>
+        <li><a href="#end---forcefully-end-an-existing-meeting">end - forcefully end an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring">Monitoring</a>
+      <ul>
+        <li><a href="#ismeetingrunning---check-whether-a-meeting-is-running">isMeetingRunning - check whether a meeting is running</a></li>
+        <li><a href="#getmeetings---get-the-list-of-existing-meetings">getMeetings - get the list of existing meetings</a></li>
+        <li><a href="#getmeetinginfo---get-details-of-an-existing-meeting">getMeetingInfo - get details of an existing meeting</a></li>
+      </ul>
+    </li>
+    <li><a href="#recording">Recording</a>
+      <ul>
+        <li><a href="#getrecordings---get-list-of-recordinngs">getRecordings - get list of recordinngs</a></li>
+        <li><a href="#publishrecordings---set-publishingunpublishing-of-a-recording">publishRecordings - set publishing/unpublishing of a recording</a></li>
+        <li><a href="#deleterecordings---delete-an-existing-recording">deleteRecordings - delete an existing recording</a></li>
+        <li><a href="#updaterecordings---update-recording-metadata">updateRecordings - update recording metadata</a></li>
+      </ul>
+    </li>
+    <li><a href="#webhooks">WebHooks</a>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-webhooks-reference" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/">WebHooks Reference</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create---create-a-new-hook">create - create a new hook</a></li>
+        <li><a href="#destroy---remove-an-existing-hook">destroy - remove an existing hook</a></li>
+        <li><a href="#list---list-existing-hooks">list - list existing hooks</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-development" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/">Development</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#checkout-source">Checkout Source</a></li>
+    <li><a href="#running-tests">Running Tests</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-about" href="aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/">About</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav>
+      </section>
+  </section>
+      </section>
+  </section>
+</aside>
+
+  </div>
+  <section class="content">
+    <h1>Getting Started</h1><h2 id="prerequisites">Prerequisites</h2>
+<h3 id="node">Node</h3>
+<p>You need a recent version (10 or newer is recommended) of Node installed locally.</p>
+<p>For comprehensive Node documentation, see <a href="https://nodejs.org/en/"><code>nodejs.org</code></a>.</p>
+<h3 id="bigbluebutton-server">BigBlueButton Server</h3>
+<p>You need a 2.x or newer version of BigBlueButton server server running. There are multiple ways to deploy the server, depending on your needs.</p>
+<p>For comprehensive BigBlueButton documentation, see <a href="https://docs.bigbluebutton.org/2.2/install.html#bbb-installsh/"><code>docs.bigbluebutton.org</code></a>.</p>
+<h2 id="installation">Installation</h2>
+<p>Using npm:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm i bigbluebutton-js
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="configuration">Configuration</h2>
+<p>You will need to provide BigBlueButton URL and secret to the script. You can obtain them by logging into you BBB server, and running:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bbb-conf --secret
+</code></pre></td></tr></table>
+</div>
+</div><p>Use the obtained values in your script:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">bbb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;bigbluebutton-js&#39;</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">bbb</span><span class="p">.</span><span class="nx">api</span><span class="p">(</span>
+    <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BBB_URL</span><span class="p">,</span> 
+    <span class="nx">process</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">BBB_SECRET</span>
+  <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Provide values to the script using environmntal variables:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">BBB_URL</span><span class="o">=</span>YOUR_URL <span class="nv">BBB_SECRET</span><span class="o">=</span>YOUR_SECRET node script.js
+</code></pre></td></tr></table>
+</div>
+</div><p>Alterantively, you can use <a href="https://www.npmjs.com/package/dotenv"><code>dotenv</code></a> file.</p>
+
+    <div class="pager">
+    </div>
+  </section>
+</div>
+
+  </main>
+<footer class="mt-2 pt-2 pb-2">
+  <div class="wrap">
+    <p>&copy; 2020 bigbluebutton-js</p>
+  </div>
+</footer>
+
+
+
+<script src = '/aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.c9f854aaa309a3d70e7c041e4e8cebd7618c63af9aa7fdcfac49343d4e9c6421c16e77634bc252da16ff6defff966f84dcfa4be5fd4419433fb37390e06f77a7.js'></script>
+
+</body>
+</html>
