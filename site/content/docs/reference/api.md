@@ -140,31 +140,3 @@ Parameters
 | --------- | -------------------- | ---------------- |
 | recordID  | Recordings record ID | required         |
 | meta      | Recordings metadata  | optional         |
-
-## WebHooks
-
-### create - create a new hook
-
-Parameters
-
-| Parameter   | Description                         | Required/Otional |
-| ----------- | ----------------------------------- | ---------------- |
-| callbackURL | Callback URL to receive events      | required         |
-| meetingID   | Meeting ID                          | optional         |
-| getRaw      | `true` set events to be unprocessed | optional         |
-
-### destroy - remove an existing hook
-
-Parameters
-
-| Parameter | Description | Required/Otional |
-| --------- | ----------- | ---------------- |
-| hookID    | Hooks ID    | required         |
-
-### list - list existing hooks
-
-Parameters
-
-| Parameter | Description | Required/Otional |
-| --------- | ----------- | ---------------- |
-| meetingID | Meeting ID  | optional         |

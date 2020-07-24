@@ -34,10 +34,10 @@ Administration create - create a new meeting Parameters
     
     <item>
       <title>WebHooks Reference</title>
-      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/hooks/</link>
+      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/webhooks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/hooks/</guid>
+      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/webhooks/</guid>
       <description>For comprehensive WebHooks reference, see docs.bigbluebutton.org.
 create - create a new hook Parameters
    Parameter Description Required/Otional     callbackURL Callback URL to receive events required   meetingID Meeting ID optional   getRaw true set events to be unprocessed optional    destroy - remove an existing hook Parameters
