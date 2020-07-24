@@ -24,7 +24,7 @@ BBB_URL=https://mysite.com/bigbluebutton
 BBB_SECRET=MySuperSecretSharedToken
 ```
 
-For comprehensive configuration documentation, see [our Getting Started section](https://docs.bigbluebutton.org/2.2/install.html#bbb-installsh/).
+For comprehensive configuration documentation, see [our Getting Started section](https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/).
 
 Make sure, you have installed development dependencies. Now you can run tests:
 

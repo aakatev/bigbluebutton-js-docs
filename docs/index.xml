@@ -22,10 +22,10 @@ This division into separate modules allows developers to use bigbluebutton-js wi
     
     <item>
       <title>API Reference</title>
-      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/</link>
+      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/</guid>
+      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/api/</guid>
       <description>When using bigbluebutton-js the required parameters should be passed as function arguments, while non-required can be passed as options object.
 For comprehensive API reference, see docs.bigbluebutton.org.
 Administration create - create a new meeting Parameters
@@ -34,10 +34,10 @@ Administration create - create a new meeting Parameters
     
     <item>
       <title>WebHooks Reference</title>
-      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/</link>
+      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/hooks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/</guid>
+      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/hooks/</guid>
       <description>For comprehensive WebHooks reference, see docs.bigbluebutton.org.
 create - create a new hook Parameters
    Parameter Description Required/Otional     callbackURL Callback URL to receive events required   meetingID Meeting ID optional   getRaw true set events to be unprocessed optional    destroy - remove an existing hook Parameters
@@ -46,10 +46,10 @@ create - create a new hook Parameters
     
     <item>
       <title>Development</title>
-      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/</link>
+      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/</guid>
+      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/development/</guid>
       <description>Checkout Source The most recent version is available on GitHub:
 1  git clone https://github.com/aakatev/bigbluebutton-js   Running Tests To run the test suites some prior configuration is required. We use dotenv to manage environmental configuration.
 First, create a .env file in library root. The file should have the following content:
@@ -59,10 +59,10 @@ Make sure, you have installed development dependencies. Now you can run tests:</
     
     <item>
       <title>About</title>
-      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/</link>
+      <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/</guid>
+      <guid>https://aakatev.github.io/bigbluebutton-js-docs/docs/about/</guid>
       <description>License This project is licensed under the ISC License - see the LICENSE file for details.
 Acknowledgments The project started as a fork of bbb-promise.</description>
     </item>

@@ -12,24 +12,24 @@
 <meta name="msapplication-config" content='https://aakatev.github.io/favicons/browserconfig.xml'>
 <meta name="theme-color" content="#ffffff">
 
-<title>WebHooks Reference | BigBlueButton JavaScript</title><meta property="og:title" content="WebHooks Reference" />
-<meta property="og:description" content="WebHooks reference for the BigBlueButton server.
-" />
+<title>About | BigBlueButton JavaScript</title><meta property="og:title" content="About" />
+<meta property="og:description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/" />
-<meta property="article:modified_time" content="2020-07-24T00:17:09-07:00" />
-<meta itemprop="name" content="WebHooks Reference">
-<meta itemprop="description" content="WebHooks reference for the BigBlueButton server.
-">
-<meta itemprop="dateModified" content="2020-07-24T00:17:09-07:00" />
-<meta itemprop="wordCount" content="62">
+<meta property="og:url" content="https://aakatev.github.io/bigbluebutton-js-docs/docs/about/" />
+
+<meta itemprop="name" content="About">
+<meta itemprop="description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise.">
+
+<meta itemprop="wordCount" content="25">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="WebHooks Reference"/>
-<meta name="twitter:description" content="WebHooks reference for the BigBlueButton server.
-"/>
+<meta name="twitter:title" content="About"/>
+<meta name="twitter:description" content="License This project is licensed under the ISC License - see the LICENSE file for details.
+Acknowledgments The project started as a fork of bbb-promise."/>
 
 
 <link rel = 'stylesheet' href = 'https://aakatev.github.io/bigbluebutton-js-docs/css/styles.af6f1aaeb8970239ef8c47174dbbb1b11902effcd1e2170749d4356fe9ab95a3d7dc4c0761ee54481d2315fcf04e6cdde81db63ad2e9921a3dd3d48f9e1ff871.css' integrity = 'sha512-r28arriXAjnvjEcXTbuxsRkC7/zR4hcHSdQ1b&#43;mrlaPX3EwHYe5USB0jFfzwTmzd6B22OtLpkho909SPnh/4cQ=='>
@@ -78,7 +78,9 @@
     <li><a href="#webhooks">WebHooks</a></li>
   </ul>
 </nav>
-        <h3 class="section_link"><a id="docs-api-reference" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/">API Reference</a></h3><nav id="TableOfContents">
+      </section>
+  </section>
+        <h3 class="section_link"><a id="docs-api-reference" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/api/">API Reference</a></h3><nav id="TableOfContents">
   <ul>
     <li><a href="#administration">Administration</a>
       <ul>
@@ -111,7 +113,7 @@
     </li>
   </ul>
 </nav>
-        <h3 class="section_link active"><a id="docs-webhooks-reference" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/hooks/">WebHooks Reference</a></h3><nav id="TableOfContents">
+        <h3 class="section_link"><a id="docs-webhooks-reference" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/reference/hooks/">WebHooks Reference</a></h3><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -122,13 +124,13 @@
     </li>
   </ul>
 </nav>
-        <h3 class="section_link"><a id="docs-development" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/">Development</a></h3><nav id="TableOfContents">
+        <h3 class="section_link"><a id="docs-development" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/development/">Development</a></h3><nav id="TableOfContents">
   <ul>
     <li><a href="#checkout-source">Checkout Source</a></li>
     <li><a href="#running-tests">Running Tests</a></li>
   </ul>
 </nav>
-        <h3 class="section_link"><a id="docs-about" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/about/">About</a></h3><nav id="TableOfContents">
+        <h3 class="section_link active"><a id="docs-about" href="https://aakatev.github.io/bigbluebutton-js-docs/docs/about/">About</a></h3><nav id="TableOfContents">
   <ul>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -136,82 +138,18 @@
 </nav>
       </section>
   </section>
-      </section>
-  </section>
 </aside>
 
   </div>
   <section class="content">
-    <h1>WebHooks Reference</h1><p>For comprehensive WebHooks reference, see <a href="https://docs.bigbluebutton.org/dev/webhooks.html#registering-hooks-api-calls"><code>docs.bigbluebutton.org</code></a>.</p>
-<h3 id="create---create-a-new-hook">create - create a new hook</h3>
-<p>Parameters</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Required/Otional</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>callbackURL</td>
-<td>Callback URL to receive events</td>
-<td>required</td>
-</tr>
-<tr>
-<td>meetingID</td>
-<td>Meeting ID</td>
-<td>optional</td>
-</tr>
-<tr>
-<td>getRaw</td>
-<td><code>true</code> set events to be unprocessed</td>
-<td>optional</td>
-</tr>
-</tbody>
-</table>
-<h3 id="destroy---remove-an-existing-hook">destroy - remove an existing hook</h3>
-<p>Parameters</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Required/Otional</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hookID</td>
-<td>Hooks ID</td>
-<td>required</td>
-</tr>
-</tbody>
-</table>
-<h3 id="list---list-existing-hooks">list - list existing hooks</h3>
-<p>Parameters</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Required/Otional</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>meetingID</td>
-<td>Meeting ID</td>
-<td>optional</td>
-</tr>
-</tbody>
-</table>
+    <h1>About</h1><h2 id="license">License</h2>
+<p>This project is licensed under the ISC License - see the <a href="https://github.com/aakatev/bigbluebutton-js/blob/master/LICENSE"><code>LICENSE</code></a> file for details.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>The project started as a fork of <a href="https://www.npmjs.com/package/bbb-promise"><code>bbb-promise</code></a>.</p>
 
     <div class="pager">
-      <a href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/api/" id="prev">&lt;&lt; API Reference</a>
+      <a href="https://aakatev.github.io/bigbluebutton-js-docs/docs/development/" id="prev">&lt;&lt; Development</a>
       
-      <a href="https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/development/" id="next">Development >></a>
     </div>
   </section>
 </div>
@@ -225,7 +163,7 @@
 
 
 
-<script src = 'https://aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.bedb43eb87c5b5fef086012427a8c04cd1b00df646768d3196f4294e62bc45182e4f2e69d62564434cc39537324eac5627427d179a00fa00817b974bc220680c.js'></script>
+<script src = 'https://aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.0fd92d21ce79a213e367edec8a1b5c700859303ad34e3189c3cbdc4dd636073316575b2241b5fe9ada32358d6dc63fb749e33f75dbf37fa854731ed7247c8469.js'></script>
 
 </body>
 </html>

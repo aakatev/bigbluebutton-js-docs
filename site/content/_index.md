@@ -22,9 +22,8 @@ title = "bigbluebutton-js"
 
 {{< /column >}}
 {{< column >}}
-![diy](/images/landing.png)
+![diy](https://aakatev.github.io/bigbluebutton-js-docs/images/landing.png)
 
-<!-- Photo by [Jasmin Schreiber](https://unsplash.com/@lavievagabonde?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash -->
 
 {{< /column >}}
 {{< /block >}}
