@@ -22,7 +22,7 @@
 <meta itemprop="description" content="Examples of using bigbluebutton-js.
 ">
 <meta itemprop="dateModified" content="2020-07-24T00:17:09-07:00" />
-<meta itemprop="wordCount" content="390">
+<meta itemprop="wordCount" content="388">
 
 
 
@@ -178,7 +178,7 @@
 </span><span class="c1">// refer to Getting Started for more information
 </span><span class="c1"></span><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">bbb</span><span class="p">.</span><span class="nx">api</span><span class="p">(</span>
     <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BBB_URL</span><span class="p">,</span> 
-    <span class="nx">process</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">BBB_SECRET</span>
+    <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BBB_SECRET</span>
   <span class="p">)</span>
 <span class="kd">let</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">bbb</span><span class="p">.</span><span class="nx">http</span>
  
@@ -190,7 +190,7 @@
 <span class="p">})</span>
  
 <span class="c1">// http method should be used in order to make calls
-</span><span class="c1"></span><span class="nx">bbb</span><span class="p">.</span><span class="nx">http</span><span class="p">(</span><span class="nx">meetingCreateUrl</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="c1"></span><span class="nx">http</span><span class="p">(</span><span class="nx">meetingCreateUrl</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
  
   <span class="kd">let</span> <span class="nx">moderatorUrl</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">administration</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;moderator&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;supersecret&#39;</span><span class="p">)</span>
@@ -230,7 +230,6 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">bbb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;bigbluebutton-js&#39;</span><span class="p">)</span>
@@ -240,12 +239,11 @@
 </span><span class="c1">// refer to Getting Started for more information
 </span><span class="c1"></span><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">bbb</span><span class="p">.</span><span class="nx">api</span><span class="p">(</span>
     <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BBB_URL</span><span class="p">,</span> 
-    <span class="nx">process</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">BBB_SECRET</span>
+    <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BBB_SECRET</span>
   <span class="p">)</span>
 <span class="kd">let</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">bbb</span><span class="p">.</span><span class="nx">http</span>
  
-<span class="nx">bbb</span>
-  <span class="p">.</span><span class="nx">http</span><span class="p">(</span><span class="nx">api</span><span class="p">.</span><span class="nx">hooks</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;https://mysite.com/bbb/hooks&#39;</span><span class="p">))</span>
+<span class="nx">http</span><span class="p">(</span><span class="nx">api</span><span class="p">.</span><span class="nx">hooks</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;https://mysite.com/bbb/hooks&#39;</span><span class="p">))</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
 </code></pre></td></tr></table>
@@ -307,7 +305,7 @@
 
 
 
-<script src = 'https://aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.18c3380a7391dadd546599e6758bbb223e194e1ed6cbdb3b02d1c8ddfd433aa844ad855edfc3395fcdd94e1a39aa8155e3ded67237534a5a3d17c867f61aac92.js'></script>
+<script src = 'https://aakatev.github.io/bigbluebutton-js-docs/js/bundle.min.33a28b5ee4effa3469853471e797ac63d5d54769d3a7bbfba1cd65b4418544ed16e2a0a5d56f245dd0786431f6adeebd58ef5984ff3c224d0397e121098c65c6.js'></script>
 
 </body>
 </html>
