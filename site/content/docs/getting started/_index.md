@@ -41,7 +41,7 @@ Use the obtained values in your script:
 const bbb = require('bigbluebutton-js')
 let api = bbb.api(
     process.env.BBB_URL, 
-    process.enc.BBB_SECRET
+    process.env.BBB_SECRET
   )
 ```
 
