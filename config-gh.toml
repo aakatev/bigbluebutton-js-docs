@@ -1,10 +1,10 @@
 baseURL = "https://aakatev.github.io/bigbluebutton-js-docs/"
 title = "BigBlueButton JavaScript"
 enableRobotsTXT = true
-themesDir = "../.."
-theme = "bigbluebutton-js-docs"
+themesDir = "themes"
+theme = "compose"
 enableGitInfo = true
-publishDir = "../docs"
+publishDir = "docs"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 

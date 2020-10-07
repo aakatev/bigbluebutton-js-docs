@@ -1,16 +1,16 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/Users/aakatev/Documents/personal/bigbluebutton-js-docs/site",
+	"sourceRoot": "/Users/aakatev/Documents/personal/bigbluebutton-js-docs",
 	"sources": [
-		"/Users/aakatev/Documents/personal/bigbluebutton-js-docs/assets/sass/main.sass",
-		"../assets/sass/_variables.sass",
-		"../assets/sass/_base.sass",
-		"../assets/sass/_nav.sass",
-		"../assets/sass/_components.sass",
-		"../assets/sass/_utils.sass",
-		"../assets/sass/_syntax.sass",
-		"../assets/sass/_fonts.sass"
+		"themes/compose/assets/sass/main.sass",
+		"themes/compose/assets/sass/_variables.sass",
+		"themes/compose/assets/sass/_base.sass",
+		"themes/compose/assets/sass/_nav.sass",
+		"themes/compose/assets/sass/_components.sass",
+		"themes/compose/assets/sass/_utils.sass",
+		"themes/compose/assets/sass/_syntax.sass",
+		"themes/compose/assets/sass/_fonts.sass"
 	],
 	"sourcesContent": [
 		"@import \"variables\";\n@import \"base\";\n@import \"nav\";\n@import \"components\";\n@import \"utils\";\n@import \"syntax\";\n@import \"fonts\";\n\nfooter {\n  min-height: 150px; }\n",
