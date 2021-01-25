@@ -15,7 +15,7 @@ For comprehensive Node documentation, see [`nodejs.org`](https://nodejs.org/en/)
 
 ### BigBlueButton Server
 
-You need a 2.x or newer version of BigBlueButton server server running. There are multiple ways to deploy the server, depending on your needs.
+You need a 2.2.x or 2.3.x version of BigBlueButton server server running. There are multiple ways to deploy the server, depending on your needs.
 
 For comprehensive BigBlueButton documentation, see [`docs.bigbluebutton.org`](https://docs.bigbluebutton.org/2.2/install.html#bbb-installsh/).
 
