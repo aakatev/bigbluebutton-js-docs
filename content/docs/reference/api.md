@@ -1,6 +1,6 @@
 ---
 title: "API Reference"
-weight: 5
+weight: 20
 description: >
   API reference for the BigBlueButton server.
 ---

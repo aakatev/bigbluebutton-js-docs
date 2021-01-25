@@ -1,6 +1,6 @@
 ---
 title: "Development"
-weight: 7
+weight: 70
 description: >
   This is the section for developers interested to contribute to the library
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-weight: 2
+weight: 10
 description: >
   This page tells you how to get started with the bigbluebutton-js, including installation and basic configuration.
 ---

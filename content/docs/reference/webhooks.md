@@ -1,6 +1,6 @@
 ---
 title: "WebHooks Reference"
-weight: 6
+weight: 21
 description: >
   WebHooks reference for the BigBlueButton server.
 ---
