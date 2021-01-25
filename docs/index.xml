@@ -4,11 +4,7 @@
     <title>bigbluebutton-js on BigBlueButton JavaScript</title>
     <link>https://aakatev.github.io/bigbluebutton-js-docs/</link>
     <description>Recent content in bigbluebutton-js on BigBlueButton JavaScript</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://aakatev.github.io/bigbluebutton-js-docs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://aakatev.github.io/bigbluebutton-js-docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Examples</title>
       <link>https://aakatev.github.io/bigbluebutton-js-docs/docs/getting-started/examples/</link>
