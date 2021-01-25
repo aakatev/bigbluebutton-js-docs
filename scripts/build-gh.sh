@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm -rf docs/
+rm -rf docs/*
 
 hugo --config config-gh.toml
